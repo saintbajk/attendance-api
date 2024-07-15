@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    container_name: attendance_orch
+    environment:
+      - 'POSTGRES_DB=attendancedb'
+      - 'POSTGRES_PASSWORD=verysecret'
+      - 'POSTGRES_USER=admin'
+    ports:
+      - '5435:5432'
